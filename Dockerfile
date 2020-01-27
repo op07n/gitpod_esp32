@@ -8,10 +8,14 @@ RUN apt update && \
     apt-get install -y gcc git wget make libncurses-dev flex bison gperf python python-serial curl && \
     mkdir /opt/esp32 && \
     cd /opt/esp32 && \
-    wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz && \
-    tar -xzf xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz && \
-    rm xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz && \
+#    wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz && \
+    wget https://dl.espressif.com/dl/xtensa-esp32-elf-gcc8_2_0-esp32-2019r1-linux-amd64.tar.gz && \
+#    tar -xzf xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz && \
+    tar -xzf xtensa-esp32-elf-gcc8_2_0-esp32-2019r1-linux-amd64.tar.gz && \
+#    rm xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz && \
+    rm xtensa-esp32-elf-gcc8_2_0-esp32-2019r1-linux-amd64.tar.gz && \    
     git clone --recursive https://github.com/espressif/esp-idf.git /opt/esp32/esp-idf
+
 
 #WORKDIR /opt/esp32
 #
